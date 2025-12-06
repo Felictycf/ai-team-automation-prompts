@@ -1,0 +1,289 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Task Breakdown Template",
+  "description": "JSON schema for decomposing complex tasks into manageable subtasks with dependencies and resource allocation",
+  "type": "object",
+  "required": ["task_id", "title", "description", "subtasks"],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "description": "Unique identifier for the main task",
+      "pattern": "^[A-Z0-9]+-[0-9]{3,}$",
+      "example": "TASK-001"
+    },
+    "title": {
+      "type": "string",
+      "description": "Clear, concise title of the main task",
+      "minLength": 5,
+      "maxLength": 200
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the task objectives and context",
+      "minLength": 10
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["critical", "high", "medium", "low"],
+      "description": "Priority level of the task",
+      "default": "medium"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["not_started", "in_progress", "blocked", "on_hold", "completed"],
+      "description": "Current status of the task",
+      "default": "not_started"
+    },
+    "estimated_duration": {
+      "type": "object",
+      "description": "Estimated time to complete the task",
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["hours", "days", "weeks"]
+        }
+      }
+    },
+    "owner": {
+      "type": "object",
+      "description": "Person responsible for the task",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    },
+    "subtasks": {
+      "type": "array",
+      "description": "Array of subtasks that decompose the main task",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["subtask_id", "title", "description"],
+        "properties": {
+          "subtask_id": {
+            "type": "string",
+            "description": "Unique identifier for the subtask",
+            "pattern": "^[A-Z0-9]+-[0-9]{3,}-[0-9]{2,}$",
+            "example": "TASK-001-01"
+          },
+          "title": {
+            "type": "string",
+            "description": "Clear title of the subtask",
+            "minLength": 3
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed description of what needs to be done"
+          },
+          "acceptance_criteria": {
+            "type": "array",
+            "description": "List of criteria that define task completion",
+            "items": {
+              "type": "string"
+            }
+          },
+          "estimated_hours": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Estimated hours to complete this subtask"
+          },
+          "assigned_to": {
+            "type": "string",
+            "description": "Name or ID of person assigned to this subtask"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["not_started", "in_progress", "blocked", "on_hold", "completed"],
+            "default": "not_started"
+          },
+          "dependencies": {
+            "type": "array",
+            "description": "IDs of subtasks that must be completed before this one",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tags": {
+            "type": "array",
+            "description": "Tags for categorization and filtering",
+            "items": {
+              "type": "string"
+            }
+          },
+          "blockers": {
+            "type": "array",
+            "description": "Any issues or dependencies blocking progress",
+            "items": {
+              "type": "object",
+              "properties": {
+                "description": {
+                  "type": "string"
+                },
+                "resolution": {
+                  "type": "string"
+                },
+                "severity": {
+                  "type": "string",
+                  "enum": ["critical", "high", "medium", "low"]
+                }
+              }
+            }
+          },
+          "resources_required": {
+            "type": "array",
+            "description": "Resources needed to complete this subtask",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["tool", "access", "documentation", "data", "other"]
+                },
+                "description": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "External tasks or requirements this task depends on",
+      "items": {
+        "type": "string"
+      }
+    },
+    "resources_required": {
+      "type": "array",
+      "description": "Overall resources needed for the task",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["tool", "access", "documentation", "data", "budget", "infrastructure"]
+          },
+          "description": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "cost": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "success_metrics": {
+      "type": "array",
+      "description": "Key metrics to measure task success",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metric": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "measurement": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the task was created"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the last update"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Expected completion date"
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "task_id": "TASK-001",
+      "title": "Implement User Authentication System",
+      "description": "Build a comprehensive user authentication and authorization system for the application",
+      "priority": "high",
+      "status": "in_progress",
+      "estimated_duration": {
+        "value": 2,
+        "unit": "weeks"
+      },
+      "owner": {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "role": "Lead Developer"
+      },
+      "subtasks": [
+        {
+          "subtask_id": "TASK-001-01",
+          "title": "Design authentication database schema",
+          "description": "Create database tables for users, sessions, and credentials",
+          "acceptance_criteria": [
+            "Database schema documented",
+            "Security best practices applied",
+            "Schema reviewed and approved"
+          ],
+          "estimated_hours": 8,
+          "assigned_to": "Jane Smith",
+          "status": "completed",
+          "tags": ["database", "backend"],
+          "resources_required": [
+            {
+              "type": "tool",
+              "description": "Database design tool"
+            }
+          ]
+        },
+        {
+          "subtask_id": "TASK-001-02",
+          "title": "Implement authentication API endpoints",
+          "description": "Build REST endpoints for login, logout, and token refresh",
+          "acceptance_criteria": [
+            "All endpoints implemented",
+            "Unit tests written",
+            "API documentation complete"
+          ],
+          "estimated_hours": 16,
+          "assigned_to": "John Doe",
+          "status": "in_progress",
+          "dependencies": ["TASK-001-01"],
+          "tags": ["backend", "api"]
+        }
+      ],
+      "due_date": "2025-12-20",
+      "created_at": "2025-12-06T09:00:16Z"
+    }
+  ]
+}
