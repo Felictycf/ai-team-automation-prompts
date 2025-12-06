@@ -18,8 +18,7 @@
 ## **📂 完整项目结构与文件清单**
 
 以下列出了项目中所有的 Prompt 和工具文件，每个文件代表了 AI 团队中的一个原子能力。
-
-.  
+```shell
 ├── 01-system-prompts/                 \# \[核心\] AI 角色定义（身份卡）  
 │   ├── supervisor-guidelines.md       \# 监督者：负责统筹上下文，防止前后端不一致  
 │   ├── pm-agent.md                    \# 产品经理：负责需求澄清与用户故事拆解  
@@ -63,7 +62,7 @@
 └── 07-claude-integration/             \# \[模型\] Claude 深度集成  
     ├── claude-project-setup.md        \# Claude Project 设置指南  
     └── claude-workspace-guide.md      \# 知识库管理指南
-
+```
 ## **🤖 如何启动多 Agent 协同 (Multi-Agent Orchestration)**
 
 本框架支持两种模式来运行多个 Agent：**手动协同模式**（适合复杂逻辑探索）和**脚本自动化模式**（适合批量任务）。
