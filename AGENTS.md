@@ -1,19 +1,18 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-This repo stores reusable AI agent system prompts and workflow templates. System prompts live in `01-system-prompts/` (architect, code reviewer, PM, supervisor). Process-driven materials reside in `02-workflow-templates/`, mixing Markdown walkthroughs and JSON schemas. Keep the numeric prefixes (`01-`, `02-`) so folders stay ordered chronologically; name new files descriptively, e.g., `01-system-prompts/security-analyst.md`. Reference `README.md` for the high-level catalog when adding new content.
+The repo is intentionally lightweight: `01-system-prompts/` houses persona definitions for every AI teammate (PM, architect, backend, frontend, QA, reviewer, supervisor), while `02-workflow-templates/` stores reusable collaboration templates such as `project-kickoff.md` and the canonical `task-breakdown.json`. Keep each prompt self-contained and reference siblings via relative paths so downstream tools like team coordinators can assemble flows reliably. Use `README.md` for high-level onboarding context and reserve any experimental drafts for `README_back.md`.
 
 ## Build, Test, and Development Commands
-Even though the project is documentation-first, treat edits like code:
-- `rg -n "##" 01-system-prompts` quickly inspects headings before editing.
-- `npx markdownlint "**/*.md"` (install `markdownlint-cli` once) enforces spacing, heading depth, and checklist style.
-- `jq empty 02-workflow-templates/task-breakdown.json` validates JSON schemas before committing.
+- `tree -L 2` gives a quick structure check before and after edits; run it from repo root when documenting layout changes.
+- `npx markdownlint "**/*.md"` enforces consistent Markdown spacing, headings, and list styles across every agent prompt.
+- `python -m json.tool 02-workflow-templates/task-breakdown.json` validates workflow JSON after edits; replace the path with any new template you add.
 
 ## Coding Style & Naming Conventions
-Write Markdown with a single `#` title, sentence-case `##` sections, and bold callouts that mirror existing prompts. Prefer ordered steps for workflows and `[ ]` checklists for actionable items. Keep prose concise and directive. JSON artifacts are two-space indented, with property order matching the schema in `02-workflow-templates/task-breakdown.json`; maintain camelCase keys for nested objects and snake_style for enum values only when already present. Filenames should read `<role>-agent.md` or `<topic>-template.md`.
+Stick to Markdown with ATX headings and keep sections concise (≤120 words) so instructions fit within LLM context limits. Roles follow snake_case filenames (`backend_developer.md`) and use level-2 headings for capabilities, workflows, and guardrails. Highlight literal commands in fenced blocks and rely on ASCII punctuation. For workflow templates, prefer deterministic keys in lowerCamelCase and describe required/optional fields inline.
 
 ## Testing Guidelines
-Before opening a PR, render new Markdown locally (VS Code preview) and scan for broken lists or spacing regressions. Run `npx markdownlint` to flag heading skips, then spot-read for inclusive language and redundant bullets. For JSON updates, run `jq empty <file>` plus a sample instantiation that passes through your preferred schema validator to ensure constraints such as regex patterns still hold. When altering workflows, include at least one example checklist you ran through manually to confirm the sequence feels actionable.
+Treat linting as the primary safety net: Markdown lint plus JSON formatting must pass before opening a PR. When adding runnable examples (e.g., CLI snippets), execute them locally and paste sanitized outputs so QA agents can replay steps verbatim. For prompt logic, stage manual “tabletop tests”: feed the updated prompt to your preferred LLM and capture any regressions in tone or scope in the PR description.
 
 ## Commit & Pull Request Guidelines
-Commits follow the imperative, capitalized style already in history (`Create Architect Agent system prompt...`, `Add Supervisor Guidelines...`). Keep each commit scoped to one prompt or workflow tweak. Pull requests should summarize the user scenario, link any tracking issue, list affected files, and paste representative excerpt(s) so reviewers can skim without opening every file. If the change modifies instructions agents will execute, describe the expected behavioral impact and call out any reviewer checklists that need re-running.
+Recent history shows short Chinese summaries (`git log` → “提交我的项目”); improve clarity by using imperative, descriptive English or bilingual messages such as `feat: add qa-agent defect triage checklist / 新增缺陷排查清单`. Each PR should link to the relevant template or persona, list validation commands, and include screenshots or LLM transcripts when behavior changes. Request at least one reviewer familiar with the affected role to keep the virtual team aligned.

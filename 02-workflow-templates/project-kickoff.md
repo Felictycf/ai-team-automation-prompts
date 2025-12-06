@@ -1,299 +1,297 @@
-# Project Kickoff Workflow Template
+# 项目启动工作流模板
 
-## Overview
-This workflow template provides a comprehensive step-by-step process for initiating new projects. It ensures all necessary planning, preparation, and stakeholder alignment is completed before project execution begins.
-
----
-
-## Phase 1: Project Initiation
-
-### Step 1: Define Project Vision & Objectives
-- **Description**: Establish clear vision and measurable objectives for the project
-- **Owner**: Project Manager / Product Owner
-- **Tasks**:
-  - [ ] Create project vision statement
-  - [ ] Define primary and secondary objectives
-  - [ ] Identify success criteria and KPIs
-  - [ ] Document expected outcomes and deliverables
-- **Deliverable**: Project Charter / Vision Document
-- **Timeline**: 3-5 business days
-
-### Step 2: Identify Stakeholders
-- **Description**: Document all project stakeholders and their interests
-- **Owner**: Project Manager
-- **Tasks**:
-  - [ ] List all internal stakeholders (team members, executives, departments)
-  - [ ] Identify external stakeholders (clients, partners, vendors)
-  - [ ] Define stakeholder roles and responsibilities
-  - [ ] Assess stakeholder influence and interest levels
-- **Deliverable**: Stakeholder Register & RACI Matrix
-- **Timeline**: 2-3 business days
-
-### Step 3: Conduct Stakeholder Alignment Meeting
-- **Description**: Meet with key stakeholders to align on project goals and expectations
-- **Owner**: Project Manager
-- **Attendees**: Core team leads, key stakeholders, sponsors
-- **Agenda Items**:
-  - [ ] Present project vision and objectives
-  - [ ] Discuss constraints and assumptions
-  - [ ] Gather feedback and concerns
-  - [ ] Confirm stakeholder commitment
-  - [ ] Define communication plan
-- **Deliverable**: Meeting notes and approved project scope statement
-- **Timeline**: 1 meeting (2 hours)
+## 概览
+本模板提供启动新项目的分步流程，确保在进入执行前完成规划、准备与干系人对齐。
 
 ---
 
-## Phase 2: Resource Planning & Team Assembly
+## 阶段一：项目启动
 
-### Step 4: Define Resource Requirements
-- **Description**: Identify all resources needed for project success
-- **Owner**: Project Manager / Resource Manager
-- **Tasks**:
-  - [ ] Determine team composition and skill requirements
-  - [ ] Identify technical infrastructure needs
-  - [ ] Assess budget requirements
-  - [ ] Plan for external resources or contractors if needed
-- **Deliverable**: Resource Plan & Budget Allocation
-- **Timeline**: 3-4 business days
+### 步骤 1：定义愿景与目标
+- **说明**：明确项目愿景与可衡量目标
+- **负责人**：项目经理 / 产品负责人
+- **任务**：
+  - [ ] 撰写愿景声明
+  - [ ] 定义主/次要目标
+  - [ ] 明确成功指标与 KPI
+  - [ ] 记录预期成果与交付物
+- **交付物**：项目章程/愿景文档
+- **周期**：3-5 个工作日
 
-### Step 5: Assemble Project Team
-- **Description**: Recruit and confirm team members
-- **Owner**: Project Manager / HR
-- **Tasks**:
-  - [ ] Identify and confirm core team members
-  - [ ] Assign team roles and responsibilities
-  - [ ] Arrange for necessary skills training
-  - [ ] Secure equipment and tools
-- **Deliverable**: Project Team List with assignments
-- **Timeline**: 3-5 business days
+### 步骤 2：识别干系人
+- **说明**：列出所有干系人及其诉求
+- **负责人**：项目经理
+- **任务**：
+  - [ ] 列出内部干系人（团队、管理层、部门）
+  - [ ] 识别外部干系人（客户、合作伙伴、供应商）
+  - [ ] 定义各角色职责
+  - [ ] 评估影响力与关注度
+- **交付物**：干系人清单 & RACI
+- **周期**：2-3 个工作日
 
-### Step 6: Establish Team Collaboration Infrastructure
-- **Description**: Set up communication and collaboration tools
-- **Owner**: Tech Lead / Project Manager
-- **Tasks**:
-  - [ ] Create project workspace (Slack channel, Teams channel, etc.)
-  - [ ] Set up project management tool (Jira, Asana, Monday.com, etc.)
-  - [ ] Configure document repository (GitHub, Google Drive, SharePoint, etc.)
-  - [ ] Schedule recurring meetings (standups, check-ins, reviews)
-  - [ ] Create team onboarding documentation
-- **Deliverable**: Project workspace setup and access credentials
-- **Timeline**: 2-3 business days
-
----
-
-## Phase 3: Detailed Planning
-
-### Step 7: Develop Project Scope Statement
-- **Description**: Create detailed project scope with clear boundaries
-- **Owner**: Project Manager
-- **Tasks**:
-  - [ ] Define what is included in the project (scope)
-  - [ ] Define what is NOT included (out of scope)
-  - [ ] Document scope constraints
-  - [ ] Get stakeholder approval
-- **Deliverable**: Detailed Scope Statement
-- **Timeline**: 3-4 business days
-
-### Step 8: Create Project Schedule
-- **Description**: Develop comprehensive project timeline
-- **Owner**: Project Manager
-- **Tasks**:
-  - [ ] Break down project into phases and milestones
-  - [ ] Create work breakdown structure (WBS)
-  - [ ] Estimate task durations and dependencies
-  - [ ] Build Gantt chart or timeline
-  - [ ] Identify critical path
-  - [ ] Set key milestones and deadlines
-- **Deliverable**: Project Schedule & Gantt Chart
-- **Timeline**: 4-5 business days
-
-### Step 9: Identify Risks & Create Mitigation Plan
-- **Description**: Assess and plan for potential risks
-- **Owner**: Project Manager / Tech Lead
-- **Tasks**:
-  - [ ] Brainstorm potential risks
-  - [ ] Assess likelihood and impact
-  - [ ] Create risk register
-  - [ ] Develop mitigation strategies
-  - [ ] Assign risk owners
-- **Deliverable**: Risk Register & Mitigation Plan
-- **Timeline**: 3-4 business days
-
-### Step 10: Define Communication Plan
-- **Description**: Establish how and when project information will be shared
-- **Owner**: Project Manager
-- **Tasks**:
-  - [ ] Define stakeholder communication schedule
-  - [ ] Create status report templates
-  - [ ] Set up escalation procedures
-  - [ ] Plan for regular team syncs
-  - [ ] Document communication channels and methods
-- **Deliverable**: Communication Plan
-- **Timeline**: 2-3 business days
+### 步骤 3：召开干系人对齐会议
+- **说明**：与关键干系人确认目标与期望
+- **负责人**：项目经理
+- **参会人**：核心团队负责人、关键干系人、赞助人
+- **议程**：
+  - [ ] 说明愿景与目标
+  - [ ] 讨论约束与假设
+  - [ ] 收集反馈与顾虑
+  - [ ] 确认承诺
+  - [ ] 制定沟通计划
+- **交付物**：会议纪要与确认的范围说明
+- **周期**：单次会议（约 2 小时）
 
 ---
 
-## Phase 4: Technical Setup & Documentation
+## 阶段二：资源规划与组建
 
-### Step 11: Set Up Version Control & Code Repository
-- **Description**: Prepare code repository and version control system
-- **Owner**: Tech Lead
-- **Tasks**:
-  - [ ] Create project repository (GitHub, GitLab, Bitbucket)
-  - [ ] Set up branch strategy (main, develop, feature branches)
-  - [ ] Configure access controls and permissions
-  - [ ] Create repository documentation (README, CONTRIBUTING guidelines)
-  - [ ] Set up CI/CD pipelines (if applicable)
-- **Deliverable**: Repository with initial setup
-- **Timeline**: 2-3 business days
+### 步骤 4：定义资源需求
+- **说明**：识别项目所需的全部资源
+- **负责人**：项目经理 / 资源经理
+- **任务**：
+  - [ ] 确定团队结构与技能需求
+  - [ ] 识别技术基础设施
+  - [ ] 评估预算
+  - [ ] 如需外部资源，提前规划
+- **交付物**：资源计划 & 预算分配
+- **周期**：3-4 个工作日
 
-### Step 12: Prepare Development & Testing Environments
-- **Description**: Set up environments for development and testing
-- **Owner**: Tech Lead / DevOps
-- **Tasks**:
-  - [ ] Configure development environment
-  - [ ] Set up staging/testing environment
-  - [ ] Prepare testing infrastructure
-  - [ ] Create environment documentation
-  - [ ] Test environment access for all team members
-- **Deliverable**: Development & Testing Environments ready for use
-- **Timeline**: 3-4 business days
+### 步骤 5：组建团队
+- **说明**：确认人员到位
+- **负责人**：项目经理 / HR
+- **任务**：
+  - [ ] 确认核心成员
+  - [ ] 明确角色与职责
+  - [ ] 安排必要技能培训
+  - [ ] 准备设备与工具
+- **交付物**：团队清单与分工
+- **周期**：3-5 个工作日
 
-### Step 13: Create Technical Architecture & Design Documents
-- **Description**: Document technical approach and architecture
-- **Owner**: Tech Lead / Architect
-- **Tasks**:
-  - [ ] Create system architecture diagram
-  - [ ] Document technology stack decisions
-  - [ ] Create design specifications
-  - [ ] Document API specifications (if applicable)
-  - [ ] Create database design (if applicable)
-- **Deliverable**: Technical Architecture & Design Documents
-- **Timeline**: 4-5 business days
-
-### Step 14: Prepare Documentation Templates & Guidelines
-- **Description**: Establish standards for project documentation
-- **Owner**: Tech Lead / Project Manager
-- **Tasks**:
-  - [ ] Create code documentation standards
-  - [ ] Prepare API documentation template
-  - [ ] Create user documentation templates
-  - [ ] Establish naming conventions
-  - [ ] Document coding standards
-- **Deliverable**: Documentation Guidelines & Templates
-- **Timeline**: 2-3 business days
+### 步骤 6：搭建协作基础设施
+- **说明**：配置沟通与协作工具
+- **负责人**：技术负责人 / 项目经理
+- **任务**：
+  - [ ] 创建项目工作区（Slack、Teams 等）
+  - [ ] 配置项目管理工具（Jira、Asana、Monday）
+  - [ ] 建立文档库（GitHub、Drive、SharePoint）
+  - [ ] 安排例会（站会、例行检查、评审）
+  - [ ] 准备团队入职手册
+- **交付物**：协作环境与访问权限
+- **周期**：2-3 个工作日
 
 ---
 
-## Phase 5: Kick-Off & Launch
+## 阶段三：详细规划
 
-### Step 15: Conduct Project Kick-Off Meeting
-- **Description**: Formally launch the project with all team members
-- **Owner**: Project Manager / Project Sponsor
-- **Attendees**: Full project team, stakeholders, sponsors
-- **Agenda Items**:
-  - [ ] Welcome and introductions
-  - [ ] Project vision and objectives overview
-  - [ ] Review scope and key deliverables
-  - [ ] Present project schedule and milestones
-  - [ ] Introduce team structure and roles
-  - [ ] Review communication plan
-  - [ ] Demonstrate collaboration tools and environment
-  - [ ] Address questions and concerns
-  - [ ] Set expectations and working agreements
-- **Deliverable**: Kick-off meeting recording and notes
-- **Timeline**: 1 meeting (2-3 hours)
+### 步骤 7：撰写范围说明
+- **说明**：明确项目范围与边界
+- **负责人**：项目经理
+- **任务**：
+  - [ ] 定义 in scope 内容
+  - [ ] 列出 out of scope 项
+  - [ ] 记录约束条件
+  - [ ] 获得干系人批准
+- **交付物**：范围说明
+- **周期**：3-4 个工作日
 
-### Step 16: Complete Team Onboarding
-- **Description**: Ensure all team members are equipped and ready
-- **Owner**: Project Manager / Tech Lead
-- **Tasks**:
-  - [ ] Provide system access and credentials
-  - [ ] Conduct tool training (project management, version control)
-  - [ ] Provide project documentation
-  - [ ] Conduct technical setup training
-  - [ ] Assign initial tasks
-  - [ ] Collect feedback on onboarding process
-- **Deliverable**: Onboarded team ready for work
-- **Timeline**: 2-3 business days
+### 步骤 8：制定项目进度
+- **说明**：构建完整时间表
+- **负责人**：项目经理
+- **任务**：
+  - [ ] 按阶段/里程碑拆解
+  - [ ] 建立 WBS
+  - [ ] 估算工期与依赖
+  - [ ] 创建甘特图或时间线
+  - [ ] 标注关键路径
+  - [ ] 设定里程碑
+- **交付物**：项目进度与甘特图
+- **周期**：4-5 个工作日
 
-### Step 17: Establish Project Governance
-- **Description**: Set up decision-making and approval processes
-- **Owner**: Project Manager / Project Sponsor
-- **Tasks**:
-  - [ ] Define approval authorities and thresholds
-  - [ ] Create change request process
-  - [ ] Establish project governance meetings
-  - [ ] Create decision log template
-  - [ ] Define escalation procedures
-- **Deliverable**: Project Governance Documentation
-- **Timeline**: 2-3 business days
+### 步骤 9：识别风险并制定缓解计划
+- **说明**：评估潜在风险
+- **负责人**：项目经理 / 技术负责人
+- **任务**：
+  - [ ] 头脑风暴风险
+  - [ ] 评估概率与影响
+  - [ ] 创建风险登记表
+  - [ ] 制定缓解策略
+  - [ ] 指定风险 Owner
+- **交付物**：风险登记表与应对计划
+- **周期**：3-4 个工作日
 
-### Step 18: Launch Project & Begin Execution
-- **Description**: Start project work according to plan
-- **Owner**: Project Manager / Team Lead
-- **Tasks**:
-  - [ ] Confirm all kick-off activities completed
-  - [ ] Launch sprint/iteration 1
-  - [ ] Conduct first team standup
-  - [ ] Begin regular status reporting
-  - [ ] Monitor progress against baseline
-- **Deliverable**: Project execution begun, initial work items started
-- **Timeline**: Ongoing
+### 步骤 10：制定沟通计划
+- **说明**：明确信息如何传递
+- **负责人**：项目经理
+- **任务**：
+  - [ ] 设定干系人沟通节奏
+  - [ ] 准备状态报告模板
+  - [ ] 定义升级机制
+  - [ ] 规划团队例会
+  - [ ] 记录沟通渠道
+- **交付物**：沟通计划
+- **周期**：2-3 个工作日
 
 ---
 
-## Summary Timeline & Dependencies
+## 阶段四：技术准备
 
-**Total Estimated Duration**: 4-6 weeks from initiation to execution launch
+### 步骤 11：版本控制与仓库
+- **说明**：准备代码仓库
+- **负责人**：技术负责人
+- **任务**：
+  - [ ] 创建 Git 仓库（GitHub/GitLab/Bitbucket）
+  - [ ] 设定分支策略（main/develop/feature）
+  - [ ] 配置权限与访问控制
+  - [ ] 编写 README、CONTRIBUTING
+  - [ ] 配置 CI/CD（如适用）
+- **交付物**：初始化仓库
+- **周期**：2-3 个工作日
 
-### Critical Path:
-1. Project Vision & Objectives (Phase 1)
-2. Stakeholder Alignment (Phase 1)
-3. Resource Planning & Team Assembly (Phase 2)
-4. Detailed Planning (Phase 3)
-5. Technical Setup (Phase 4)
-6. Kick-Off & Launch (Phase 5)
+### 步骤 12：环境搭建
+- **说明**：准备开发与测试环境
+- **负责人**：技术负责人 / DevOps
+- **任务**：
+  - [ ] 配置开发环境
+  - [ ] 建立测试/预发环境
+  - [ ] 准备测试基础设施
+  - [ ] 编写环境文档
+  - [ ] 确认团队可访问
+- **交付物**：可用的开发与测试环境
+- **周期**：3-4 个工作日
 
-### Key Milestones:
-- **Week 1**: Project vision approved, stakeholders aligned
-- **Week 2**: Team assembled, infrastructure setup initiated
-- **Week 3**: Detailed planning completed, risk assessment done
-- **Week 4**: Technical setup complete, documentation ready
-- **Week 5-6**: Kick-off executed, team onboarded, execution launched
+### 步骤 13：技术架构与设计文档
+- **说明**：记录技术方案
+- **负责人**：技术负责人 / 架构师
+- **任务**：
+  - [ ] 绘制系统架构图
+  - [ ] 记录技术栈选择
+  - [ ] 撰写设计规格
+  - [ ] 定义 API 契约（如需要）
+  - [ ] 设计数据库（如需要）
+- **交付物**：架构/设计文档
+- **周期**：4-5 个工作日
+
+### 步骤 14：文档模板与规范
+- **说明**：统一文档标准
+- **负责人**：技术负责人 / 项目经理
+- **任务**：
+  - [ ] 定义代码文档规范
+  - [ ] 准备 API 文档模板
+  - [ ] 创建用户文档模板
+  - [ ] 制定命名规范
+  - [ ] 记录编码标准
+- **交付物**：文档指南与模板
+- **周期**：2-3 个工作日
 
 ---
 
-## Success Criteria
+## 阶段五：Kick-off 与启动
 
-By the end of the Project Kickoff workflow, the following should be true:
+### 步骤 15：召开 Kick-off 会议
+- **说明**：正式启动项目
+- **负责人**：项目经理 / 赞助人
+- **参会人**：全体项目成员、干系人、赞助人
+- **议程**：
+  - [ ] 欢迎与介绍
+  - [ ] 愿景/目标回顾
+  - [ ] 确认范围与交付物
+  - [ ] 演示进度与里程碑
+  - [ ] 介绍组织结构与角色
+  - [ ] 复盘沟通计划
+  - [ ] 演示工具/环境
+  - [ ] 回答问题
+  - [ ] 确认工作约定
+- **交付物**：会议录音/纪要
+- **周期**：单次会议（2-3 小时）
 
-- ✅ Clear project vision and objectives are defined and approved
-- ✅ All stakeholders are identified and aligned
-- ✅ Project team is assembled and equipped
-- ✅ Detailed project plan with schedule is in place
-- ✅ All collaboration tools and infrastructure are set up
-- ✅ Technical architecture and design are documented
-- ✅ Risk mitigation strategies are identified
-- ✅ All team members have been onboarded and trained
-- ✅ Formal kick-off meeting has been conducted
-- ✅ Project governance is established
-- ✅ Team is ready and motivated to begin execution
+### 步骤 16：团队入职
+- **说明**：确保成员就绪
+- **负责人**：项目经理 / 技术负责人
+- **任务**：
+  - [ ] 提供系统访问权限
+  - [ ] 培训工具使用（PM、版本控制）
+  - [ ] 发放项目文档
+  - [ ] 讲解技术环境
+  - [ ] 分配初始任务
+  - [ ] 收集入职反馈
+- **交付物**：完成入职的团队
+- **周期**：2-3 个工作日
+
+### 步骤 17：建立治理机制
+- **说明**：确定决策与审批流程
+- **负责人**：项目经理 / 赞助人
+- **任务**：
+  - [ ] 定义审批权限
+  - [ ] 制定变更流程
+  - [ ] 建立治理会议
+  - [ ] 创建决策日志模板
+  - [ ] 明确升级流程
+- **交付物**：治理文档
+- **周期**：2-3 个工作日
+
+### 步骤 18：启动执行
+- **说明**：按照计划开始工作
+- **负责人**：项目经理 / 团队负责人
+- **任务**：
+  - [ ] 确认所有启动项完成
+  - [ ] 开启第一个迭代/冲刺
+  - [ ] 召开首次站会
+  - [ ] 启动状态报告
+  - [ ] 对照基线监控进度
+- **交付物**：项目正式进入执行
+- **周期**：持续进行
 
 ---
 
-## Notes & Best Practices
+## 总体时间线与依赖
 
-- **Flexibility**: Adapt this template based on project size, complexity, and organizational context
-- **Documentation**: Maintain all deliverables in the project repository for future reference
-- **Communication**: Keep stakeholders informed throughout the kickoff process
-- **Team Involvement**: Involve the team early to build buy-in and capture valuable insights
-- **Risk Management**: Don't skip the risk assessment phase; early identification prevents later issues
-- **Iteration**: Use feedback from kickoff activities to refine processes in subsequent projects
+**预计总时长**：4-6 周
+
+### 关键路径
+1. 愿景与目标确认（阶段一）
+2. 干系人对齐（阶段一）
+3. 资源规划与组建（阶段二）
+4. 详细规划（阶段三）
+5. 技术准备（阶段四）
+6. Kick-off 与启动（阶段五）
+
+### 里程碑
+- **第 1 周**：愿景获批，干系人对齐
+- **第 2 周**：团队就位，基础设施上线
+- **第 3 周**：详细计划与风险评估完成
+- **第 4 周**：技术准备收尾，文档齐备
+- **第 5-6 周**：Kick-off 完成，团队入职并启动执行
 
 ---
 
-**Template Created**: 2025-12-06  
-**Version**: 1.0  
-**Last Updated**: 2025-12-06
+## 成功标准
+
+- ✅ 愿景与目标明确并获批
+- ✅ 干系人识别并对齐
+- ✅ 团队组建完毕且具备资源
+- ✅ 项目计划/进度表已完成
+- ✅ 协作工具与基础设施可用
+- ✅ 技术架构/设计文档准备就绪
+- ✅ 风险与缓解策略明确
+- ✅ 团队完成入职与培训
+- ✅ 正式 Kick-off 完成
+- ✅ 治理机制落地
+- ✅ 团队准备充分并投入执行
+
+---
+
+## 备注与最佳实践
+
+- **灵活性**：可根据项目规模/复杂度调优
+- **文档**：所有交付物应存档于项目库
+- **沟通**：启动过程中保持透明沟通
+- **团队参与**：尽早让团队参与以提升认同
+- **风险管理**：务必完成风险评估
+- **迭代**：基于复盘不断改进启动流程
+
+---
+
+**模板创建**：2025-12-06  
+**版本**：1.0  
+**最近更新**：2025-12-06

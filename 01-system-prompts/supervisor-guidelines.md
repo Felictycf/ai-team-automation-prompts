@@ -1,484 +1,465 @@
-# Supervisor Guidelines
+# 监督者指南
 
-**Last Updated:** 2025-12-06  
-**Version:** 1.0
+**最近更新**：2025-12-06  
+**版本**：1.0
 
-## Overview
-
-This document provides comprehensive guidelines for human supervisors overseeing AI-assisted team automation processes. Supervisors are responsible for ensuring quality, compliance, safety, and ethical use of AI tools within the organization.
-
----
-
-## 1. Role and Responsibilities
-
-### Primary Responsibilities
-
-- **Oversight**: Monitor AI system outputs and team automation workflows
-- **Quality Assurance**: Verify accuracy and appropriateness of AI-generated content
-- **Risk Management**: Identify and mitigate potential risks or errors
-- **Compliance**: Ensure adherence to organizational policies and regulatory requirements
-- **Training**: Provide guidance to team members on proper AI tool usage
-- **Escalation**: Flag issues for further investigation or intervention
-
-### Key Competencies
-
-- Understanding of AI capabilities and limitations
-- Domain expertise relevant to supervised processes
-- Strong communication and documentation skills
-- Ethical decision-making ability
-- Attention to detail and pattern recognition
+## 概述
+本指南面向负责 AI 协作流程的人工监督者，目标是确保质量、合规、安全与伦理。监督者需要监控 AI 输出、规范流程并在必要时介入处理。
 
 ---
 
-## 2. Monitoring Framework
+## 1. 角色与职责
 
-### 2.1 Real-Time Monitoring
+### 核心职责
+- **监督**：监控 AI 输出与自动化流程
+- **质量保证**：核验内容的准确性与适当性
+- **风险管理**：识别并缓解潜在风险或错误
+- **合规**：确保符合组织政策与监管要求
+- **培训**：指导团队正确使用 AI 工具
+- **升级**：对异常进行上报与跟进
 
-**Frequency**: Continuous during active operations
-
-**What to Monitor:**
-- AI system health and availability
-- Error rates and anomalies
-- Processing speed and performance metrics
-- Resource utilization
-- User activity patterns
-
-**Tools & Dashboards:**
-- System monitoring dashboard
-- Error log aggregation
-- Performance metrics tracker
-- Activity audit logs
-
-**Alert Thresholds:**
-- Error rate > 5%: Warning level
-- Error rate > 10%: Critical level - immediate escalation
-- Response time > 2x baseline: Investigation required
-- Unusual resource consumption: Review and investigate
-
-### 2.2 Periodic Reviews
-
-**Daily Review (15-30 minutes)**
-- Check overnight logs and alerts
-- Review high-confidence AI outputs
-- Monitor queue status and bottlenecks
-- Verify system health metrics
-
-**Weekly Review (1-2 hours)**
-- Analyze aggregated performance metrics
-- Review sample of AI outputs across different task types
-- Assess team feedback and concerns
-- Identify trends or patterns
-- Update risk assessments
-
-**Monthly Review (2-4 hours)**
-- Comprehensive performance analysis
-- Cost-benefit evaluation
-- User satisfaction assessment
-- Compliance and policy review
-- Strategic adjustments
+### 必备能力
+- 了解 AI 能力与局限
+- 所在领域的专业知识
+- 强沟通与文档能力
+- 坚守伦理与判断力
+- 细致、善于识别模式
 
 ---
 
-## 3. Quality Assurance Standards
+## 2. 监控框架
 
-### 3.1 Output Validation
+### 2.1 实时监控
 
-**Accuracy Standards:**
-- Critical outputs: 99%+ accuracy required
-- High-importance outputs: 95%+ accuracy required
-- Standard outputs: 90%+ accuracy required
+**频率**：业务运行期间持续
 
-**Validation Methods:**
-1. **Spot Checking**: Random sampling of outputs (minimum 5% of high-risk items)
-2. **Peer Review**: Second reviewer for critical decisions
-3. **Automated Validation**: Rules-based checking for common errors
-4. **User Feedback**: Incorporate corrections and complaints
-5. **Benchmarking**: Compare against human-only baseline
+**监控内容**：
+- 系统健康度、可用性
+- 错误率与异常
+- 处理速度与性能
+- 资源使用情况
+- 用户行为模式
 
-**Quality Metrics to Track:**
-- Accuracy rate by task type
-- Revision rate (% requiring changes)
-- User satisfaction scores
-- Time-to-correction metrics
-- Rework frequency
+**工具**：
+- 系统监控面板
+- 错误日志聚合
+- 性能指标平台
+- 审计日志
 
-### 3.2 Common Issues to Watch For
+**告警阈值**：
+- 错误率 >5%：警告
+- 错误率 >10%：严重，立即升级
+- 响应时间 > 基线 2 倍：需调查
+- 异常资源占用：需排查
 
-| Issue Type | Indicators | Action |
-|-----------|-----------|--------|
-| **Hallucination** | False information, made-up details, confident but incorrect statements | Flag for review, provide corrected info, adjust prompts |
-| **Bias** | Unfair treatment, discriminatory language, stereotyping | Immediate review, diversity audit, prompt adjustment |
-| **Privacy Violations** | Unauthorized use of sensitive data, exposure of confidential information | Escalate immediately, audit logs, implement controls |
-| **Context Misunderstanding** | Irrelevant responses, missing key constraints, misinterpreted requirements | Review prompt clarity, add examples, fine-tune instructions |
-| **Inconsistency** | Conflicting outputs for similar inputs, changing behavior | Check for instruction drift, review recent changes |
-| **Outdated Information** | Using stale data, referencing obsolete processes | Verify knowledge base currency, update sources |
+### 2.2 定期复核
+
+**每日（15-30 分钟）**
+- 查看夜间日志与告警
+- 抽检高置信度输出
+- 关注队列状态与瓶颈
+- 检查系统健康指标
+
+**每周（1-2 小时）**
+- 分析汇总性能指标
+- 抽查不同任务类型输出
+- 收集团队反馈
+- 识别趋势与模式
+- 更新风险评估
+
+**每月（2-4 小时）**
+- 深度绩效分析
+- 成本收益评估
+- 用户满意度调研
+- 合规与政策审查
+- 战略调整建议
 
 ---
 
-## 4. Compliance and Risk Management
+## 3. 质量标准
 
-### 4.1 Compliance Checklist
+### 3.1 输出验证
 
-- [ ] All outputs comply with data protection regulations (GDPR, CCPA, etc.)
-- [ ] No unauthorized access to restricted information
-- [ ] Audit trails are complete and accurate
-- [ ] AI decisions don't violate anti-discrimination policies
-- [ ] Intellectual property rights are respected
-- [ ] Confidentiality agreements are honored
-- [ ] System changes are documented and approved
-- [ ] User consent requirements are met
+**准确率要求**：
+- 关键输出：≥99%
+- 高重要度输出：≥95%
+- 标准输出：≥90%
 
-### 4.2 Risk Categories and Response
+**验证方式**：
+1. **抽检**：随机抽样（高风险至少 5%）
+2. **交叉复核**：关键决策需第二人复核
+3. **自动验证**：规则校验常见错误
+4. **用户反馈**：收集纠错与投诉
+5. **基准对比**：与纯人工结果对照
 
-**HIGH RISK:**
-- Bias or discrimination in outputs
-- Privacy or security violations
-- Regulatory non-compliance
-- Safety-critical errors
+**质量指标**：
+- 分任务类型的准确率
+- 修订率（需要返工的比例）
+- 用户满意度
+- 纠错耗时
+- 返工频率
 
-**Response:**
-- Immediate investigation
-- Suspend affected operations if necessary
-- Executive notification
-- Root cause analysis
-- Corrective action plan
+### 3.2 常见问题
 
-**MEDIUM RISK:**
-- Quality degradation
-- User dissatisfaction
-- Performance issues
-- Process inefficiencies
+| 问题 | 指标 | 处理 |
+|------|------|------|
+| **幻觉** | 虚假信息、自信但错误的表述 | 标记审查，提供正确信息并调优提示词 |
+| **偏见** | 不公平或歧视性语言 | 立即复核，多样性审计，调整提示词 |
+| **隐私泄露** | 未授权使用或暴露敏感数据 | 立刻升级，审计日志，加强控制 |
+| **上下文误解** | 无关内容、遗漏约束 | 检查提示清晰度，补充示例 |
+| **不一致** | 相似输入得出不同结果 | 检查指令漂移，回顾近期修改 |
+| **信息过时** | 使用陈旧资料 | 更新知识库与来源 |
 
-**Response:**
-- Investigate within 24 hours
-- Document findings
-- Develop improvement plan
-- Monitor implementation
+---
 
-**LOW RISK:**
-- Minor errors that don't affect outcomes
-- Temporary performance dips
-- Routine maintenance needs
+## 4. 合规与风险管理
 
-**Response:**
-- Standard logging
-- Trend monitoring
-- Routine optimization
+### 4.1 合规清单
+- [ ] 输出遵守数据保护法规（GDPR/CCPA 等）
+- [ ] 无未授权访问敏感信息
+- [ ] 审计链完整可追溯
+- [ ] 无违反反歧视政策的决策
+- [ ] 尊重知识产权
+- [ ] 遵守保密协议
+- [ ] 系统变更有记录与批准
+- [ ] 满足用户授权与告知要求
 
-### 4.3 Incident Reporting
+### 4.2 风险等级与响应
 
-**When to Report:**
-- Any suspected policy violation
-- Security or privacy concerns
-- Regulatory compliance questions
-- Potential bias or discrimination
-- Significant quality issues
-- System failures
+**高风险**：
+- 输出存在偏见/歧视
+- 隐私或安全事件
+- 监管不合规
+- 安全关键错误
 
-**Reporting Template:**
+**响应**：
+- 立即调查
+- 必要时暂停相关流程
+- 通知管理层
+- 执行根因分析
+- 制定纠正行动计划
+
+**中风险**：
+- 质量下降
+- 用户抱怨
+- 性能问题
+- 流程低效
+
+**响应**：
+- 24 小时内调查
+- 记录结论
+- 制定改进计划
+- 跟踪落实
+
+**低风险**：
+- 轻微错误不影响结果
+- 临时性能波动
+- 日常维护需求
+
+**响应**：
+- 正常记录
+- 观察趋势
+- 例行优化
+
+### 4.3 事件报告
+
+**何时上报**：
+- 任何疑似政策违规
+- 安全/隐私问题
+- 合规疑问
+- 偏见或歧视风险
+- 严重质量问题
+- 系统故障
+
+**报告模板**：
 ```
 Incident Report
-- Date/Time: [when detected]
-- Category: [risk level & type]
-- Description: [detailed account]
-- Impact: [affected users/data/processes]
-- Evidence: [logs, outputs, screenshots]
-- Initial Assessment: [supervisor's evaluation]
-- Recommended Action: [next steps]
+- 时间：
+- 风险类别：
+- 描述：
+- 影响：
+- 证据：
+- 初步评估：
+- 建议措施：
 ```
 
 ---
 
-## 5. Human Oversight Touchpoints
+## 5. 人工介入节点
 
-### 5.1 Critical Decision Points
+### 5.1 关键决策时刻
 
-**Before Automation:**
-- Review automation scope and boundaries
-- Identify decision points requiring human judgment
-- Set up escalation triggers
-- Brief team on AI tool capabilities
+**自动化前**：
+- 审核自动化范围
+- 标记需要人工判断的节点
+- 设置升级触发条件
+- 向团队介绍 AI 能力边界
 
-**During Automation:**
-- Monitor for trigger conditions
-- Maintain readiness for manual intervention
-- Track decision rationale
-- Document exceptional cases
+**自动化中**：
+- 监控触发条件
+- 随时准备人工接管
+- 记录决策原因
+- 记录例外案例
 
-**After Automation:**
-- Review outcomes against objectives
-- Collect feedback from end users
-- Assess whether human review was adequate
-- Adjust oversight level as needed
+**自动化后**：
+- 校验结果是否达标
+- 收集用户反馈
+- 评估人工审核是否充足
+- 调整监督力度
 
-### 5.2 Escalation Criteria
+### 5.2 升级标准
 
-**Immediate Escalation to Management:**
-- Security or data breach concerns
-- Potential legal or regulatory violations
-- High-impact errors affecting customers
-- AI system failures
-- Suspected bias or discrimination
-- Policy violations
+**立即向管理层升级**：
+- 数据/安全事件
+- 潜在法律/监管风险
+- 高影响客户问题
+- AI 系统失效
+- 偏见或歧视
+- 政策违规
 
-**Escalation to Technical Team:**
-- System performance issues
-- Unexplained error patterns
-- Configuration concerns
-- Integration failures
-- Prompt effectiveness questions
+**升级至技术团队**：
+- 性能问题
+- 异常错误模式
+- 配置担忧
+- 集成故障
+- 提示词有效性问题
 
-**Escalation to Subject Matter Experts:**
-- Accuracy concerns in specialized domains
-- Complex judgment calls
-- Policy interpretation questions
-- Risk assessment for new use cases
-
----
-
-## 6. Documentation and Audit Trail
-
-### 6.1 Required Documentation
-
-**For Each Automated Process:**
-- Process description and objectives
-- AI system/prompt used
-- Data sources and inputs
-- Quality standards applied
-- Oversight frequency and methods
-- Contact person for questions
-
-**For Audit Trail:**
-- Timestamp of all operations
-- Input data and parameters
-- Output generated
-- Approval/review decisions
-- Any modifications made
-- User who made changes
-
-### 6.2 Record Retention
-
-- **Active Records**: Maintain accessible for current review
-- **Archival**: Move older records to archive after 12 months
-- **Deletion**: Follow organization's data retention policy
-- **Legal Holds**: Preserve records when requested
-- **Audit Access**: Ensure authorized auditors can access records
+**升级至领域专家**：
+- 专业准确性问题
+- 复杂判断
+- 政策解读
+- 新用例的风险评估
 
 ---
 
-## 7. Feedback and Continuous Improvement
+## 6. 文档与审计
 
-### 7.1 Feedback Loop
+### 6.1 必备文档
 
-**Collect Feedback From:**
-- End users of automated processes
-- Team members using AI tools
-- Quality reviewers
-- System administrators
-- External stakeholders
+**每个自动化流程需记录**：
+- 流程描述与目标
+- 使用的 AI 系统/提示词
+- 数据来源与输入
+- 质量标准
+- 监督频率与方法
+- 责任人
 
-**Feedback Methods:**
-- Regular surveys
-- One-on-one discussions
-- Team meetings
-- Anonymous feedback channels
-- Error reporting systems
+**审计线索**：
+- 操作时间戳
+- 输入参数
+- 输出内容
+- 审批/复核记录
+- 任何修改
+- 执行者身份
 
-### 7.2 Improvement Process
-
-1. **Gather**: Collect data on issues, suggestions, performance
-2. **Analyze**: Identify patterns and root causes
-3. **Prioritize**: Focus on high-impact improvements
-4. **Test**: Validate changes in controlled environment
-5. **Implement**: Roll out approved changes
-6. **Monitor**: Track effectiveness of improvements
-7. **Share**: Communicate results and learnings
-
-### 7.3 Prompt Optimization
-
-When AI outputs need improvement:
-
-1. **Identify the Problem**: What specifically is wrong?
-2. **Analyze Root Cause**: Is it the prompt, data, or model limitation?
-3. **Test Hypotheses**: Try prompt modifications
-4. **Document Changes**: Record what was changed and why
-5. **Validate Results**: Confirm improvement in sample set
-6. **Roll Out**: Update prompt system-wide
-7. **Monitor**: Verify continued effectiveness
+### 6.2 存档策略
+- **活动记录**：保持随时可查
+- **归档**：12 个月后转入档案
+- **删除**：遵循组织保留策略
+- **法律保全**：收到指示需保留
+- **审计访问**：确保授权人员可访问
 
 ---
 
-## 8. Team Training and Onboarding
+## 7. 反馈与持续改进
 
-### 8.1 Supervisor Training Requirements
+### 7.1 反馈来源
+- 自动化流程用户
+- 使用 AI 工具的团队
+- 质量审核人员
+- 系统管理员
+- 外部干系人
 
-- AI capabilities and limitations (required for all)
-- Relevant domain knowledge
-- Prompt engineering basics
-- Data privacy and security protocols
-- Organization's AI ethics framework
-- Incident response procedures
-- Tool-specific training
+### 7.2 反馈方式
+- 定期问卷
+- 一对一访谈
+- 团队会议
+- 匿名渠道
+- 缺陷/错误报告系统
 
-### 8.2 Team Member Training
+### 7.3 改进流程
+1. **收集**：汇总问题、建议、性能数据
+2. **分析**：识别模式与根因
+3. **排序**：聚焦高影响改进
+4. **测试**：在受控环境验证
+5. **实施**：推广已验证改动
+6. **监控**：持续追踪效果
+7. **分享**：同步结果与经验
 
-- How to use AI tools effectively
-- When to seek supervisor approval
-- Quality standards they should expect
-- Privacy and compliance obligations
-- How to provide feedback
-- Escalation procedures
-
-### 8.3 Knowledge Base
-
-Maintain documentation on:
-- Common questions and answers
-- Best practices and examples
-- Lessons learned
-- Prompt performance data
-- Known limitations and workarounds
-
----
-
-## 9. Communication Protocols
-
-### 9.1 Internal Communications
-
-**To Team Members:**
-- Daily: System status updates
-- Weekly: Performance summary
-- As needed: Issue alerts, guidance
-- Format: Email, chat, meetings as appropriate
-
-**To Management:**
-- Weekly: Status and metrics report
-- As needed: Critical issues
-- Monthly: Comprehensive review
-- Format: Written report, scheduled meetings
-
-**To Stakeholders:**
-- Weekly/Monthly: Progress toward goals
-- As needed: Impact assessments
-- Quarterly: Strategic updates
-- Format: Executive summary, detailed reports available on request
-
-### 9.2 Documentation of Communications
-
-- Keep records of major decisions and discussions
-- Archive important announcements
-- Log incident reports and resolutions
-- Track policy changes and approvals
+### 7.4 提示词优化流程
+1. 明确问题
+2. 分析根因（提示词/数据/模型限制）
+3. 假设并尝试新提示
+4. 记录修改与原因
+5. 在样本集验证改进
+6. 全量更新
+7. 持续监控效果
 
 ---
 
-## 10. Escalation Flowchart
+## 8. 培训与入职
+
+### 8.1 监督者培训
+- 了解 AI 能力与限制
+- 领域知识
+- 提示词工程基础
+- 数据隐私与安全流程
+- 组织 AI 伦理准则
+- 事件响应流程
+- 工具使用培训
+
+### 8.2 团队培训
+- 高效使用 AI 工具
+- 何时需要监督者批准
+- 质量标准
+- 隐私与合规义务
+- 如何反馈问题
+- 升级步骤
+
+### 8.3 知识库
+- 常见问答
+- 最佳实践示例
+- 经验教训
+- 提示词表现记录
+- 已知限制与解决方案
+
+---
+
+## 9. 沟通规范
+
+### 9.1 内部沟通
+
+**面向团队**：
+- 每日：系统状态更新
+- 每周：性能摘要
+- 视情况：问题告警、操作指南
+- 形式：邮件、IM、会议
+
+**面向管理层**：
+- 每周：状态与指标
+- 视情况：重大问题
+- 每月：综合评估
+- 形式：书面报告 + 例会
+
+**面向干系人**：
+- 每周/每月：目标进展
+- 视情况：影响评估
+- 每季度：战略更新
+- 形式：高管摘要，可选详细报告
+
+### 9.2 沟通记录
+- 保存重大决策与讨论
+- 归档重要公告
+- 记录事件与解决过程
+- 跟踪政策变更与批准
+
+---
+
+## 10. 升级流程图
 
 ```
-Issue Detected
+问题发现
     ↓
-Severity Assessment
+严重度评估
     ↓
-┌─────────────────────────────┬──────────────────┬─────────────────┐
-│                             │                  │                 │
-LOW RISK                   MEDIUM RISK        HIGH RISK
-│                             │                  │
-Log & Monitor            Document &         Immediate Action
-(24-48 hrs)              Investigate        Escalate to Mgmt
-                         (24 hrs)           Preserve Evidence
-                         │                  │
-                         ↓                  ↓
-                    Report Status      Executive Review
-                    Update Logs         Root Cause
-                    Corrective          Formal Plan
-                    Actions             Oversight
+┌──────────────┬──────────┬─────────┐
+│              │          │         │
+低风险       中风险     高风险
+│              │          │
+记录监控     记录+调查   立即行动
+(24-48h)     (24h)       升级管理层
+                         保留证据
+                         │
+                         ↓
+                    管理层复核
+                    根因分析
+                    改进计划
 ```
 
 ---
 
-## 11. Supervisor Checklist
+## 11. 日常清单
 
-### Daily
-- [ ] Review system alerts and error logs
-- [ ] Check critical output queue
-- [ ] Verify system uptime and performance
-- [ ] Review overnight activity
+### 每日
+- [ ] 检查系统告警与错误日志
+- [ ] 查看关键输出队列
+- [ ] 确认系统可用性与性能
+- [ ] 复核夜间活动
 
-### Weekly
-- [ ] Analyze performance metrics
-- [ ] Sample check quality outputs (5-10 items)
-- [ ] Review team feedback and concerns
-- [ ] Update risk assessments
-- [ ] Prepare status report
+### 每周
+- [ ] 分析性能指标
+- [ ] 抽检输出（5-10 条）
+- [ ] 回收团队反馈
+- [ ] 更新风险评估
+- [ ] 准备周报
 
-### Monthly
-- [ ] Comprehensive performance review
-- [ ] Quality metrics analysis
-- [ ] Cost-benefit assessment
-- [ ] Compliance checklist
-- [ ] Team feedback session
-- [ ] Executive report
+### 每月
+- [ ] 全面绩效审查
+- [ ] 质量指标分析
+- [ ] 成本收益评估
+- [ ] 合规检查
+- [ ] 团队反馈会议
+- [ ] 管理层报告
 
-### Quarterly
-- [ ] Strategic review of automation program
-- [ ] Identify new optimization opportunities
-- [ ] Update training materials
-- [ ] Assess tool effectiveness
-- [ ] Plan for next quarter
+### 每季度
+- [ ] 自动化战略复盘
+- [ ] 寻找优化机会
+- [ ] 更新培训材料
+- [ ] 评估工具有效性
+- [ ] 规划下季度重点
 
 ---
 
-## 12. Contact and Escalation Information
+## 12. 联系与升级
 
-**Supervisor Email Template for Issues:**
-
+**监督者邮件模板**：
 ```
-To: [Manager/Lead]
-Subject: [Risk Level] - [Issue Category] - [Brief Description]
+收件人: [管理者]
+主题: [风险等级] - [问题类别] - [简述]
 
-Issue Summary:
-[What happened]
+问题摘要：
+[描述]
 
-Impact:
-[Who/what is affected and how serious]
+影响：
+[受影响对象/范围]
 
-Timeline:
-[When detected, when it started, any pattern]
+时间线：
+[发现时间、发生时间、频率]
 
-Evidence:
-[Logs, screenshots, data]
+证据：
+[日志、截图、数据]
 
-Recommended Action:
-[What should be done]
+建议措施：
+[下一步]
 
-Cc: [Relevant stakeholders]
+抄送：
+[相关干系人]
 ```
 
 ---
 
-## 13. Version History and Updates
+## 13. 版本记录
 
-| Version | Date | Changes |
-|---------|------|---------|
-| 1.0 | 2025-12-06 | Initial version with comprehensive guidelines |
-
----
-
-## Appendix A: Useful Resources
-
-- AI Ethics Framework: [internal link]
-- Data Protection Policy: [internal link]
-- Incident Response Plan: [internal link]
-- Tool Documentation: [internal links]
-- Contact Directory: [internal link]
-
-## Appendix B: Related Policies
-
-- Data Privacy Policy
-- Information Security Policy
-- Acceptable Use Policy
-- Code of Conduct
-- Vendor Management Policy
+| 版本 | 日期 | 说明 |
+|------|------|------|
+| 1.0 | 2025-12-06 | 初版综合指南 |
 
 ---
 
-**Questions? Contact your immediate supervisor or the AI Governance team.**
+## 附录 A：资源
+- AI 伦理框架
+- 数据保护政策
+- 事件响应计划
+- 工具文档
+- 联系人目录
+
+## 附录 B：相关政策
+- 数据隐私政策
+- 信息安全政策
+- 可接受使用政策
+- 行为准则
+- 供应商管理政策
+
+---
+
+如有问题，请联系直属主管或 AI 治理团队。

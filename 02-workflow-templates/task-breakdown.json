@@ -1,42 +1,42 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Task Breakdown Template",
-  "description": "JSON schema for decomposing complex tasks into manageable subtasks with dependencies and resource allocation",
+  "title": "任务拆解模板",
+  "description": "用于将复杂任务拆分为可管理子任务并标注依赖与资源分配的 JSON Schema",
   "type": "object",
   "required": ["task_id", "title", "description", "subtasks"],
   "properties": {
     "task_id": {
       "type": "string",
-      "description": "Unique identifier for the main task",
+      "description": "主任务唯一标识",
       "pattern": "^[A-Z0-9]+-[0-9]{3,}$",
       "example": "TASK-001"
     },
     "title": {
       "type": "string",
-      "description": "Clear, concise title of the main task",
+      "description": "主任务的简洁标题",
       "minLength": 5,
       "maxLength": 200
     },
     "description": {
       "type": "string",
-      "description": "Detailed description of the task objectives and context",
+      "description": "任务目标与业务背景描述",
       "minLength": 10
     },
     "priority": {
       "type": "string",
       "enum": ["critical", "high", "medium", "low"],
-      "description": "Priority level of the task",
+      "description": "任务优先级",
       "default": "medium"
     },
     "status": {
       "type": "string",
       "enum": ["not_started", "in_progress", "blocked", "on_hold", "completed"],
-      "description": "Current status of the task",
+      "description": "当前状态",
       "default": "not_started"
     },
     "estimated_duration": {
       "type": "object",
-      "description": "Estimated time to complete the task",
+      "description": "任务预计耗时",
       "required": ["value", "unit"],
       "properties": {
         "value": {
@@ -51,7 +51,7 @@
     },
     "owner": {
       "type": "object",
-      "description": "Person responsible for the task",
+      "description": "任务责任人",
       "required": ["name"],
       "properties": {
         "name": {
@@ -68,7 +68,7 @@
     },
     "subtasks": {
       "type": "array",
-      "description": "Array of subtasks that decompose the main task",
+      "description": "子任务列表",
       "minItems": 1,
       "items": {
         "type": "object",
@@ -76,22 +76,22 @@
         "properties": {
           "subtask_id": {
             "type": "string",
-            "description": "Unique identifier for the subtask",
+            "description": "子任务唯一标识",
             "pattern": "^[A-Z0-9]+-[0-9]{3,}-[0-9]{2,}$",
             "example": "TASK-001-01"
           },
           "title": {
             "type": "string",
-            "description": "Clear title of the subtask",
+            "description": "子任务标题",
             "minLength": 3
           },
           "description": {
             "type": "string",
-            "description": "Detailed description of what needs to be done"
+            "description": "子任务需要完成的工作"
           },
           "acceptance_criteria": {
             "type": "array",
-            "description": "List of criteria that define task completion",
+            "description": "子任务的验收条件",
             "items": {
               "type": "string"
             }
@@ -99,11 +99,11 @@
           "estimated_hours": {
             "type": "number",
             "minimum": 0,
-            "description": "Estimated hours to complete this subtask"
+            "description": "完成该子任务预计小时数"
           },
           "assigned_to": {
             "type": "string",
-            "description": "Name or ID of person assigned to this subtask"
+            "description": "负责人姓名或 ID"
           },
           "status": {
             "type": "string",
@@ -112,21 +112,21 @@
           },
           "dependencies": {
             "type": "array",
-            "description": "IDs of subtasks that must be completed before this one",
+            "description": "必须先完成的子任务 ID",
             "items": {
               "type": "string"
             }
           },
           "tags": {
             "type": "array",
-            "description": "Tags for categorization and filtering",
+            "description": "便于筛选的标签",
             "items": {
               "type": "string"
             }
           },
           "blockers": {
             "type": "array",
-            "description": "Any issues or dependencies blocking progress",
+            "description": "阻塞项及其状态",
             "items": {
               "type": "object",
               "properties": {
@@ -145,7 +145,7 @@
           },
           "resources_required": {
             "type": "array",
-            "description": "Resources needed to complete this subtask",
+            "description": "子任务所需资源",
             "items": {
               "type": "object",
               "properties": {
@@ -167,14 +167,14 @@
     },
     "dependencies": {
       "type": "array",
-      "description": "External tasks or requirements this task depends on",
+      "description": "主任务依赖的外部任务或条件",
       "items": {
         "type": "string"
       }
     },
     "resources_required": {
       "type": "array",
-      "description": "Overall resources needed for the task",
+      "description": "主任务整体所需资源",
       "items": {
         "type": "object",
         "properties": {
@@ -196,7 +196,7 @@
     },
     "success_metrics": {
       "type": "array",
-      "description": "Key metrics to measure task success",
+      "description": "衡量任务成功的指标",
       "items": {
         "type": "object",
         "properties": {
@@ -215,25 +215,25 @@
     "created_at": {
       "type": "string",
       "format": "date-time",
-      "description": "Timestamp when the task was created"
+      "description": "任务创建时间"
     },
     "updated_at": {
       "type": "string",
       "format": "date-time",
-      "description": "Timestamp of the last update"
+      "description": "最近更新时间"
     },
     "due_date": {
       "type": "string",
       "format": "date",
-      "description": "Expected completion date"
+      "description": "预计完成日期"
     }
   },
   "additionalProperties": false,
   "examples": [
     {
       "task_id": "TASK-001",
-      "title": "Implement User Authentication System",
-      "description": "Build a comprehensive user authentication and authorization system for the application",
+      "title": "实现用户认证系统",
+      "description": "为应用构建一套完整的用户认证与授权能力",
       "priority": "high",
       "status": "in_progress",
       "estimated_duration": {
@@ -241,42 +241,42 @@
         "unit": "weeks"
       },
       "owner": {
-        "name": "John Doe",
-        "email": "john@example.com",
-        "role": "Lead Developer"
+        "name": "李晓明",
+        "email": "liming@example.com",
+        "role": "后端负责人"
       },
       "subtasks": [
         {
           "subtask_id": "TASK-001-01",
-          "title": "Design authentication database schema",
-          "description": "Create database tables for users, sessions, and credentials",
+          "title": "设计认证数据库 Schema",
+          "description": "创建用户、会话、凭据相关数据表",
           "acceptance_criteria": [
-            "Database schema documented",
-            "Security best practices applied",
-            "Schema reviewed and approved"
+            "Schema 已文档化",
+            "符合安全最佳实践",
+            "通过评审"
           ],
           "estimated_hours": 8,
-          "assigned_to": "Jane Smith",
+          "assigned_to": "王珊",
           "status": "completed",
           "tags": ["database", "backend"],
           "resources_required": [
             {
               "type": "tool",
-              "description": "Database design tool"
+              "description": "数据库建模工具"
             }
           ]
         },
         {
           "subtask_id": "TASK-001-02",
-          "title": "Implement authentication API endpoints",
-          "description": "Build REST endpoints for login, logout, and token refresh",
+          "title": "实现认证 API 接口",
+          "description": "构建登录、登出、刷新 Token 的 REST 接口",
           "acceptance_criteria": [
-            "All endpoints implemented",
-            "Unit tests written",
-            "API documentation complete"
+            "全部接口实现",
+            "补齐单元测试",
+            "完成 API 文档"
           ],
           "estimated_hours": 16,
-          "assigned_to": "John Doe",
+          "assigned_to": "李晓明",
           "status": "in_progress",
           "dependencies": ["TASK-001-01"],
           "tags": ["backend", "api"]
